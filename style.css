@@ -1,0 +1,37 @@
+@font-face { font-family: 'Unbounded'; src: url('fonts/Unbounded.woff2') format('woff2'); font-weight: 200 900; font-display: swap; }
+@font-face { font-family: 'Rubik'; src: url('fonts/Rubik.woff2') format('woff2'); font-weight: 300 900; font-display: swap; }
+:root {
+  --navy: #0a1730; --panel: #10234a; --card: rgba(255,255,255,.06); --line: rgba(255,255,255,.12);
+  --text: #fff; --muted: #9fb6da; --dim: #6f86ad; --yel: #ffd84a; --yel2: #ffb31a; --ink: #0a2350;
+}
+* { box-sizing: border-box; }
+html { background: var(--navy); }
+body { margin: 0; min-height: 100vh; color: var(--text); background: radial-gradient(ellipse at 50% -10%, #1d3f7a 0%, var(--navy) 60%) no-repeat, var(--navy);
+  font: 16px/1.6 Rubik, "Segoe UI", Roboto, Arial, sans-serif; -webkit-font-smoothing: antialiased; overflow-wrap: anywhere; }
+a { color: var(--yel); text-underline-offset: 3px; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 32px 16px 56px; }
+.top { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+.top img { width: 40px; height: 40px; border-radius: 10px; }
+.top b { font-family: Unbounded, Rubik, sans-serif; font-size: 15px; letter-spacing: .3px; }
+.hero { text-align: center; padding: 56px 0 24px; }
+.hero img { width: 128px; height: 128px; border-radius: 28px; box-shadow: 0 12px 40px rgba(0,0,0,.45); }
+.logo { font-family: Unbounded, Rubik, sans-serif; font-weight: 900; line-height: 1; margin: 28px 0 0; }
+.logo .t2 { display: block; font-size: 30px; }
+.logo .t1 { display: block; font-size: 48px; color: var(--yel); text-shadow: 0 4px 0 #1b4ea8; }
+.lead { color: #dce8fb; font-size: 18px; max-width: 520px; margin: 22px auto 0; }
+.cta { display: inline-flex; align-items: center; gap: 10px; margin-top: 28px; padding: 14px 26px; border-radius: 16px; font-weight: 800;
+  color: var(--ink); background: linear-gradient(180deg, #ffe680, var(--yel2)); box-shadow: 0 5px 0 #b8741a; text-decoration: none; }
+.cta.off { opacity: .55; pointer-events: none; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 20px 22px; margin-top: 20px; }
+.card h2 { font-family: Unbounded, Rubik, sans-serif; font-size: 17px; margin: 0 0 8px; color: var(--yel); }
+.lang { display: flex; gap: 8px; justify-content: center; margin-top: 18px; }
+.lang a { padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); text-decoration: none; font-weight: 700; font-size: 14px; }
+.doc h1 { font-family: Unbounded, Rubik, sans-serif; font-size: 26px; line-height: 1.25; margin: 36px 0 4px; }
+.doc h2 { font-size: 18px; margin: 28px 0 6px; color: var(--yel); }
+.doc p, .doc li { color: #dce8fb; }
+.doc ul { padding-left: 20px; }
+.meta { color: var(--muted); font-size: 14px; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0 8px; }
+footer { color: var(--dim); font-size: 13px; margin-top: 40px; text-align: center; }
+footer a { color: var(--muted); }
+@media (max-width: 480px) { .logo .t1 { font-size: 38px; } .logo .t2 { font-size: 24px; } .doc h1 { font-size: 22px; } }
